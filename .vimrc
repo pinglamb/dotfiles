@@ -6,7 +6,7 @@ set shell=/bin/bash
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'gmarik/vundle'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 " Plugin 'clones/vim-l9'
@@ -67,9 +67,12 @@ Plugin 'elixir-editors/vim-elixir'
 Plugin 'Quramy/tsuquyomi'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'dense-analysis/ale'
-" Plugin 'fatih/vim-go'
+Plugin 'fatih/vim-go'
 Plugin 'hashivim/vim-terraform'
 Plugin 'towolf/vim-helm'
+Plugin 'google/vim-jsonnet'
+Plugin 'TovarishFin/vim-solidity'
+Plugin 'editorconfig/editorconfig-vim'
 
 " Quickly edit/reload the vimrc file
 let mapleader=","
@@ -203,10 +206,12 @@ let g:rails_projections = {
 " Set this variable to 1 to fix files when you save them.
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
-      \ "ruby": ["rubocop", "prettier"],
       \ "javascript": ["eslint"],
-      \ "typescript": ["eslint"],
+      \ "typescript": ["prettier"],
+      \ "solidity": ["prettier"],
+      \ "ruby": ["rubocop", "prettier"],
       \ }
 " let g:ale_javascript_prettier_options = '--no-semi --single-quote --trailing-comma es5'
 
 let g:terraform_fmt_on_save=1
+let g:snipMate = { 'snippet_version' : 1 }

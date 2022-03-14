@@ -1,4 +1,5 @@
 ```
+brew install fish
 brew install git
 brew install git-flow-avh
 brew install postgresql
